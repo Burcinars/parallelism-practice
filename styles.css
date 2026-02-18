@@ -1,0 +1,211 @@
+:root {
+  --bg: #f4f7f9;
+  --panel: #ffffff;
+  --text: #1d2730;
+  --muted: #445563;
+  --border: #ccd7df;
+  --primary: #1f5fa8;
+  --primary-strong: #194e8a;
+  --correct: #1f7a40;
+  --wrong: #8a2530;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1rem 1.2rem;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
+.lead {
+  color: var(--muted);
+}
+
+.controls-panel {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.level-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.level-btn {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  background: #fff;
+  border-radius: 999px;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  min-width: 130px;
+}
+
+.level-btn[aria-selected="true"] {
+  background: var(--primary);
+  color: #fff;
+}
+
+.level-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.status-grid {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.status-grid p {
+  margin: 0;
+}
+
+.teacher-toggle {
+  font-weight: 700;
+}
+
+.teacher-toggle input {
+  transform: scale(1.2);
+  margin-right: 0.4rem;
+}
+
+.question-meta {
+  color: var(--muted);
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+#prompt {
+  margin-bottom: 0.5rem;
+}
+
+#context {
+  margin-top: 0;
+  color: #2f3f4c;
+}
+
+.choices {
+  display: grid;
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+
+.choice-card {
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-start;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  padding: 0.9rem;
+  cursor: pointer;
+  background: #fff;
+  min-height: 72px;
+}
+
+.choice-card:hover {
+  border-color: var(--primary);
+}
+
+.choice-card input {
+  margin-top: 0.35rem;
+  transform: scale(1.4);
+}
+
+.choice-text {
+  font-size: 1rem;
+}
+
+.actions {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+button {
+  border: 2px solid var(--border);
+  background: #fff;
+  border-radius: 10px;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  min-width: 150px;
+}
+
+button.primary {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+button.primary:hover {
+  background: var(--primary-strong);
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.feedback h3 {
+  margin-bottom: 0.6rem;
+}
+
+#incorrect-feedback h3 {
+  color: var(--wrong);
+}
+
+#correct-feedback h3 {
+  color: var(--correct);
+}
+
+.feedback p {
+  margin: 0.35rem 0;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .app {
+    padding: 1rem;
+  }
+
+  .choice-card,
+  button,
+  .level-btn {
+    width: 100%;
+  }
+}
