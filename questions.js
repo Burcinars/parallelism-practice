@@ -91,16 +91,16 @@ const QUESTION_BANK = [
     prompt: "Pick the best parallel sentence from a performance review.",
     context: "Manager note should describe strengths in one pattern.",
     choices: [
-      "She is reliable, communicates clearly, and meeting deadlines.",
-      "She is reliable, clear in communication, and meets deadlines.",
+      "She is reliable, communicates clearly, and meets deadlines.",
+      "She is reliable, clear in communication, and meeting deadlines.",
       "She is reliable, communicating clearly, and meets deadlines.",
-      "She is reliable, clear communication, and meeting deadlines."
+      "She is reliability-focused, communicates clearly, and deadline management."
     ],
-    correctIndex: 1,
-    hintByChoice: ["The third item should match the type of the second item.", "", "Mixing -ing with finite verbs can break parallelism.", "Check whether each item matches adjective/noun/verb pattern."],
-    wrongWhyByChoice: ["The first two are adjective + verb; third is gerund phrase.", "", "'communicating' mismatches with 'is reliable' and 'meets.'", "This mixes adjective, noun phrase, and gerund phrase."],
-    correctWhy: "The sentence balances adjective + prepositional phrase + finite verb clause in a stable way: reliable, clear in communication, and meets deadlines.",
-    ruleToRemember: "Make each item in a list play the same grammatical role.",
+    correctIndex: 0,
+    hintByChoice: ["", "Two items should be action verbs if one item is an action verb.", "Check whether all three coordinated items use the same finite verb pattern.", "Look at the grammatical type of the final item."],
+    wrongWhyByChoice: ["", "This mixes an adjective phrase with a gerund phrase, so the list is not structurally consistent.", "'communicating' is a gerund phrase, but the other two coordinated items are finite clauses.", "The final item is a noun phrase, not a parallel finite-verb clause."],
+    correctWhy: "Each coordinated element is a finite clause with the same subject 'She': is reliable, communicates clearly, and meets deadlines. This creates a clean, parallel performance statement.",
+    ruleToRemember: "In coordinated performance traits, keep each item in the same clause pattern.",
     conceptTag: "matching grammatical roles"
   },
   {
